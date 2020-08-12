@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+  <div class="container"> <div>
+    <form method="POST" action = "{{ url_for('search')}}">
+      <header>
+      <div>
+        <h2>Search</h2>
+      </div>
+      {{ form.hidden_tag() }}
+      {{ wtf.form_field(form.q) }}
+      {{ wtf.form_field(form.typo) }}
+      {{ wtf.form_field(form.submit) }}
+    </form>
+    {% for res in result %}
+      <div class='row'>
+        <div class='col-sm-8'>
+            {{res}}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div>
+    {% for res in results %}
+      <div class='row'>
+        <div class='col-sm-8'>
+            {{res}}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}
