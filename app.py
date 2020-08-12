@@ -21,11 +21,11 @@ API_VERSION = "v1"
 SPOTIFY_API_URL = "{}/{}".format(SPOTIFY_API_BASE_URL, API_VERSION)
 
 # Server-side Parameters
-#CLIENT_SIDE_URL = "https://music-explorer-new.herokuapp.com/"
-CLIENT_SIDE_URL = "http://127.0.0.1:8080"
+CLIENT_SIDE_URL = "https://music-explorer-new.herokuapp.com/"
+#CLIENT_SIDE_URL = "http://127.0.0.1:8080"
 
-REDIRECT_URI = "http://127.0.0.1:8080/callback/q"
-#REDIRECT_URI = "https://music-explorer-new.herokuapp.com/callback/q"
+#REDIRECT_URI = "http://127.0.0.1:8080/callback/q"
+REDIRECT_URI = "https://music-explorer-new.herokuapp.com/callback/q"
 
 REDIRECT_URI2 = "https://music-explorer-new.herokuapp.com/search"
 SCOPE = "user-library-read user-top-read user-read-currently-playing user-read-playback-state user-follow-read user-read-recently-played streaming user-read-email user-read-private"
@@ -265,4 +265,4 @@ def current_user_recently_played(account, limit=15, after=None, before=None):
 
 
 if __name__ == "__main__":
-    app.run(threaded=True,port=8080, debug=True)
+    app.run(threaded=True, debug=True)
