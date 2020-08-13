@@ -16,8 +16,8 @@
         }
     
         .swiper-container {
-          width: 70%;
-          height: 50%;
+          width: 80%;
+          height: 80%;
           box-shadow: 5px 5px 5px 5px #8888887e;
         }
     
@@ -69,6 +69,14 @@
           margin-left:0;
           padding:0
         }
+        .list-object img{
+          width:70px;
+          height:70px;
+        }
+        .name-pic{
+          text-decoration:none;
+          color:black;
+        }
     </style>
 </head>
 
@@ -83,7 +91,9 @@
                 {% for artist in top_artists1 %}
                     <div>
                         <li class='list-object'>
-                            {{artist.name}}
+                          <div>
+                            <a href='{{artist.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{artist.name}}</a>
+                          </div>
                         </li>
                     </div>
                 {% endfor %}
@@ -92,7 +102,7 @@
               {% for artist in top_artists2 %}
                   <div>
                       <li class='list-object'>
-                          {{artist.name}}
+                        <a href='{{artist.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{artist.name}}</a>
                       </li>
                   </div>
               {% endfor %}
@@ -106,7 +116,7 @@
                 {% for track in top_tracks1 %}
                     <div>
                         <li class='list-object'>
-                            {{track.name}}
+                          <a href='{{track.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{track.name}}</a>
                         </li>
                     </div>
                 {% endfor %}
@@ -115,7 +125,7 @@
               {% for track in top_tracks2 %}
                   <div>
                       <li class='list-object'>
-                          {{track.name}}
+                        <a href='{{track.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{track.name}}</a>
                       </li>
                   </div>
               {% endfor %}
@@ -129,7 +139,7 @@
                   {% for track in recently_played1 %}
                       <div>
                           <li class='list-object'>
-                              {{track.name}}
+                            <a href='{{track.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{track.name}}</a>
                           </li>
                       </div>
                   {% endfor %}
@@ -138,7 +148,7 @@
                 {% for track in recently_played2 %}
                     <div>
                         <li class='list-object'>
-                            {{track.name}}
+                          <a href='{{track.external_urls.spotify}}'target="_blank"class = 'name-pic'>{{track.name}}</a>
                         </li>
                     </div>
                 {% endfor %}
