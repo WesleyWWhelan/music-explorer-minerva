@@ -9,7 +9,7 @@ from forms import SearchForm
 ##### Defintions #####
 
 CLIENT_ID = 'f063991e203144ed94d9607e907b99cb'
-CLIENT_SECRET = '4ad51a4e31e14066919d1ad63ca6e055'
+CLIENT_SECRET = 
 app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'something'
